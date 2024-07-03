@@ -11,15 +11,11 @@ It felt like I was stuck in the past while the rest of my home was getting smart
 
 That's exactly what I managed to achieve:
 
-
+https://github.com/henry-morris/meridian-maestro/assets/23333300/23c97096-f46a-4fb2-b7d2-0b4ad9895a36
 
 ## This Post, a Roadmap to Audio Nirvana
 
-In this post, I'm going to share how I turned that vision into reality. I'll walk you through my journey of automating my Meridian DSP5000 speakers using a Raspberry Pi, a USB to RS232 cable, a bit of coding magic and HomeKit. Hopefully it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-click music!
-
-## The One Tap to Audio Bliss Dream 
-
-My aim was straightforward: I wanted my Meridian DSP5000 speakers to turn on and automatically set themselves to 90% volume within seconds of me activating them through HomeKit. No more remotes, no more manual volume adjusting - just instant, perfect sound at the tap of a button.
+In this post, I'll walk you through my journey of automating activating my Meridian DSP5000 speakers using a Raspberry Pi, a USB to RS232 cable, a bit of coding magic and HomeKit. Hopefully it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-click music!
 
 ## The Cast of Characters
 
@@ -41,29 +37,21 @@ I connected the Master speaker and the Raspberry Pi's power supply to one Meross
 
 ## Wiring for Wonder: The Physical Connections Explained
 
-The Raspberry Pi connects to the Master speaker via the RS232 adapter. This allows the Pi to send commands directly to the speaker. The Master and Slave speakers are connected via a Comms cable, which allows the Master to control the Slave.
+The Raspberry Pi connects to the Master speaker via the RS232 adapter. This allows the Pi to send commands directly to the speaker. The Master and Slave speakers are connected via a Comms cable, which allows the Master to control the Slave. Here's how everything connects:
 
-![Connection Close-up](path_to_connection_photo.jpg)
+![diagram](https://github.com/henry-morris/meridian-maestro/assets/23333300/e5de70dd-60eb-40da-ae39-164f88d4d7e2)
 
 ## The Brain of the Operation: Configuring the Raspberry Pi
 
 The Raspberry Pi acts as a bridge between the smart home ecosystem and the RS232 interface of the Meridian speakers. Here's how I set it up:
 
 1. Operating System: I installed DietPi, a lightweight Debian-based OS, to ensure fast boot times
-2. Boot Script (activate.sh), I created a script called activate.sh
-3. This script waits for the USB-to-Serial device to be available, then sends commands to set the speakers to CD input and 90% volume. After 5 minutes, it shuts down the Raspberry Pi.
-4. Systemd Service (activate.service):
-To run the script at boot, I created a systemd service:
+2. Boot Script (activate.sh), this script waits for the USB-to-Serial device to be available, then sends commands to set the speakers to CD input and 90% volume. 
+3. Systemd Service (activate.service), to run the activate.sh script at boot, I created a systemd service
 
-Enabling the Service:
-I enabled the service to run at boot with these commands:
-
-## The Grand Finale: Witnessing the Magic in Action
+## The Grand Finale
 
 With this setup, when I turn on the smart plugs via HomeKit, the first plug activates both the Master speaker and the Raspberry Pi simultaneously. The Pi boots up, runs the script to configure the speakers, and then shuts itself down. The whole process takes about 15 seconds from plug activation to having the speakers ready at the perfect volume.
-[Video: A short clip showing the activation process from tapping the HomeKit button to hearing audio from the speakers]
-## Lean, Green, and Aurally Clean: The Energy Efficiency Bonus
-An added bonus of this setup is its energy efficiency. The Raspberry Pi shuts down after 5 minutes, ensuring it's not constantly drawing power when not in use.
 
-## The Encore: Wrapping-Up
+## The Encore
 What used to be a multi-step process is now as simple as tapping a button. It's a perfect blend of high-end audio and modern smart home technology. If you're considering a similar project, my advice is to go for it. The process might seem daunting at first, but the result is well worth the effort.
