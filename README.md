@@ -33,7 +33,3 @@ The Raspberry Pi acts as a bridge between the smart home ecosystem and the RS232
 ## The Grand Finale
 
 With this setup, when I turn on the smart plugs via HomeKit, the first plug activates both the Master speaker and the Raspberry Pi simultaneously. The Pi boots up, runs the script to configure the speakers, and then shuts itself down. The whole process takes about 15 seconds from plug activation to having the speakers ready at the perfect volume.
-
-## The Encore
-
-What used to be a multi-step process is now as simple as tapping a button. It's a perfect blend of high-end audio and modern smart home technology. If you're considering a similar project, my advice is to go for it. The process might seem daunting at first, but the result is well worth the effort.
