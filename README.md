@@ -20,6 +20,32 @@ Here's what I used:
 
 Here's how everything connects:
 
+```mermaid
+graph TD
+    A[iPhone] -.->|HomeKit| B[Home Network]
+    J[Mac] -.->|HomeKit| B
+    B -.->|WiFi| C[Meross Smart Plug 1]
+    B -.->|WiFi| D[Meross Smart Plug 2]
+    C -->|Power| E[Meridian DSP5000 Master Speaker]
+    C -->|Power| H[USB Power Adapter]
+    H -->|Power| G[Raspberry Pi Zero W 2]
+    D -->|Power| F[Meridian DSP5000 Slave Speaker]
+    B -.->|WiFi| G
+    G -->|USB| I[USB to RS232 Adapter]
+    I -->|RS232| E
+    E -->|Comm cable| F
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style J fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#cfc,stroke:#333,stroke-width:2px
+    style D fill:#cfc,stroke:#333,stroke-width:2px
+    style E fill:#fcc,stroke:#333,stroke-width:2px
+    style F fill:#fcc,stroke:#333,stroke-width:2px
+    style G fill:#fcf,stroke:#333,stroke-width:2px
+    style H fill:#cff,stroke:#333,stroke-width:2px
+    style I fill:#ffc,stroke:#333,stroke-width:2px
+
 <a href="https://github.com/henry-morris/meridian-maestro/assets/23333300/e5de70dd-60eb-40da-ae39-164f88d4d7e2"><img src="https://github.com/henry-morris/meridian-maestro/assets/23333300/e5de70dd-60eb-40da-ae39-164f88d4d7e2" width="50%"></a>
 
 ## The Brain of the Operation: Configuring the Raspberry Pi
