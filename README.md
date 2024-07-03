@@ -1,41 +1,37 @@
-# From Fumbling to Flawless: Automating Meridian DSP5000 Speakers with HomeKit and Raspberry Pi
+# Automating Meridian DSP5000 Speaker Activation for One-Click Audio Bliss
 
-## The Sound of Perfection: Why I Love My Meridian DSP5000s
+## Love Yet a DailySymphony of Frustration
 
-I love my Meridian DSP5000 speakers: they sound great and are all-digital.
-
-## The Daily Dilemma: A Symphony of Frustration
-
-But I didn't love the process of turning them on… every time I wanted to listen to music, I had to go through the same tedious routine:
+I love my Meridian DSP5000 speakers: they sound great and are all-digital. But I didn't love the process of turning them on… every time I wanted to listen to music, I had to go through the same tedious routine:
 
 1. Activate the power plugs
 2. Find the remote control
 3. Turn on the speakers
 4. Click-click-click my way up to the right volume
 
-## The Lightbulb Moment: Bridging High-End Audio with Smart Home Tech
+## The Lightbulb Moment
 
 It felt like I was stuck in the past while the rest of my home was getting smarter. I knew there had to be a better way. I wanted the simplicity of smart home control for my high-end audio system. Imagine just tapping a button on my phone and having the speakers power up, set themselves to the perfect volume, and be ready to play in seconds.
 
-## Your Roadmap to Audio Nirvana: What This Post Offers
+## This Post, a Roadmap to Audio Nirvana
 
-In this post, I'm going to share how I turned that vision into reality. I'll walk you through my journey of automating my Meridian DSP5000 speakers using RS232, a Raspberry Pi, a bit of coding magic and HomeKit. Hopefully it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-click music!
+In this post, I'm going to share how I turned that vision into reality. I'll walk you through my journey of automating my Meridian DSP5000 speakers using a Raspberry Pi, a USB to RS232 cable, a bit of coding magic and HomeKit. Hopefully it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-click music!
 
-## The Dream Setup: One Tap to Audio Bliss
+## The One Tap to Audio Bliss Dream 
 
-My aim was straightforward but game-changing: I wanted my Meridian DSP5000 speakers to turn on and automatically set themselves to 90% volume within seconds of me activating them through HomeKit. No more remotes, no more manual volume adjusting - just instant, perfect sound at the tap of a button.
+My aim was straightforward: I wanted my Meridian DSP5000 speakers to turn on and automatically set themselves to 90% volume within seconds of me activating them through HomeKit. No more remotes, no more manual volume adjusting - just instant, perfect sound at the tap of a button.
 
-## The Cast of Characters: Meet the Tech Behind the Magic
+## The Cast of Characters
 
 Here's what I used:
 
 1. Two Meridian DSP5000 speakers
-2. Two Meross WiFi Smart Plugs (HomeKit compatible)
+2. Two HomeKit compatible Meross WiFi Smart Plugs
 3. Raspberry Pi Zero W 2 with a fast MicroSD card
 4. USB to Serial RS232 Adapter with FTDI Chipset
 5. USB Plug Adaptor (for powering the Raspberry Pi)
 
-It's important to note that one Meross WiFi Smart Plug powers both the Master Speaker and the Raspberry Pi (via the USB Power Adapter). This dual-powering is key to the automation process.
+It's important to note that one Meross WiFi Smart Plug powers both the Master Speaker and the Raspberry Pi (via the USB Power Adapter); this dual-powering is key to the automation process.
 
 ![Equipment Layout](path_to_equipment_photo.jpg)
 
@@ -54,7 +50,20 @@ The Raspberry Pi connects to the Master speaker via the RS232 adapter. This allo
 The Raspberry Pi acts as a bridge between the smart home ecosystem and the RS232 interface of the Meridian speakers. Here's how I set it up:
 
 1. Operating System: I installed DietPi, a lightweight Debian-based OS, to ensure fast boot times
-2. Boot Script (activate.sh):
-   I created a script called activate.sh with the following content:
-   ```bash
-   # Insert your activate.sh script here
+2. Boot Script (activate.sh), I created a script called activate.sh
+3. This script waits for the USB-to-Serial device to be available, then sends commands to set the speakers to CD input and 90% volume. After 5 minutes, it shuts down the Raspberry Pi.
+4. Systemd Service (activate.service):
+To run the script at boot, I created a systemd service:
+
+Enabling the Service:
+I enabled the service to run at boot with these commands:
+
+## The Grand Finale: Witnessing the Magic in Action
+
+With this setup, when I turn on the smart plugs via HomeKit, the first plug activates both the Master speaker and the Raspberry Pi simultaneously. The Pi boots up, runs the script to configure the speakers, and then shuts itself down. The whole process takes about 15 seconds from plug activation to having the speakers ready at the perfect volume.
+[Video: A short clip showing the activation process from tapping the HomeKit button to hearing audio from the speakers]
+## Lean, Green, and Aurally Clean: The Energy Efficiency Bonus
+An added bonus of this setup is its energy efficiency. The Raspberry Pi shuts down after 5 minutes, ensuring it's not constantly drawing power when not in use.
+
+## The Encore: Wrapping-Up
+What used to be a multi-step process is now as simple as tapping a button. It's a perfect blend of high-end audio and modern smart home technology. If you're considering a similar project, my advice is to go for it. The process might seem daunting at first, but the result is well worth the effort.
