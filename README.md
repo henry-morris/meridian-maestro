@@ -47,7 +47,7 @@ graph TD
     style G fill:#fcf,stroke:#333,stroke-width:2px
     style H fill:#cff,stroke:#333,stroke-width:2px
     style I fill:#ffc,stroke:#333,stroke-width:2px
-
+```
 
 <a href="https://github.com/henry-morris/meridian-maestro/assets/23333300/e5de70dd-60eb-40da-ae39-164f88d4d7e2"><img src="https://github.com/henry-morris/meridian-maestro/assets/23333300/e5de70dd-60eb-40da-ae39-164f88d4d7e2" width="50%"></a>
 
