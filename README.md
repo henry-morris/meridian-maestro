@@ -1,7 +1,5 @@
 # Automating Meridian DSP5000 Speaker Activation for One-Click Audio Bliss
 
-## Love Yet a DailySymphony of Frustration
-
 I love my Meridian DSP5000 speakers: they sound great and are all-digital. But I didn't love the process of turning them on… every time I wanted to listen to music, I had to go through the same tedious routine:
 
 1. Activate the power plugs
@@ -9,9 +7,11 @@ I love my Meridian DSP5000 speakers: they sound great and are all-digital. But I
 3. Turn on the speakers
 4. Click-click-click my way up to the right volume
 
-## The Lightbulb Moment
-
 It felt like I was stuck in the past while the rest of my home was getting smarter. I knew there had to be a better way. I wanted the simplicity of smart home control for my high-end audio system. Imagine just tapping a button on my phone and having the speakers power up, set themselves to the perfect volume, and be ready to play in seconds.
+
+That's exactly what I managed to achieve:
+
+
 
 ## This Post, a Roadmap to Audio Nirvana
 
