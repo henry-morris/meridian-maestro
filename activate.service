@@ -1,0 +1,15 @@
+[Unit]
+Description=Run activate.sh at startup, then shutdown after 5 minutes
+After=sysinit.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/dietpi/activate.sh
+RemainAfterExit=true
+User=root
+Group=root
+StandardOutput=append:/home/dietpi/activate.log
+StandardError=append:/home/dietpi/activate.log
+
+[Install]
+WantedBy=multi-user.target
