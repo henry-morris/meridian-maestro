@@ -1,10 +1,10 @@
 # Automating Meridian DSP5000 Speaker Activation for One-Click Audio Bliss
 
-I love my Meridian DSP5000 speakers, but turning them on was a hassle: activate plugs, find remote, power up, adjust volume. It felt outdated compared to my smart home. I envisioned a simpler solution - one tap on my phone to power up the speakers and set the perfect volume. As the video below show, that's what I've managed to achieve:
+I love my Meridian DSP5000 speakers, but turning them on was a hassle: activate plugs, find remote, power up, adjust volume. It felt outdated compared to my smart home. I envisioned a simpler solution - one click/tap on my Mac/iPhone to power up the speakers and set the perfect volume. As the video below show, that's what I've managed to achieve!:
 
 [![Demo Video](https://github.com/henry-morris/meridian-maestro/assets/23333300/23c97096-f46a-4fb2-b7d2-0b4ad9895a36)](https://github.com/henry-morris/meridian-maestro/assets/23333300/23c97096-f46a-4fb2-b7d2-0b4ad9895a36)
 
-I'll walk you through my set-up which automates activating my Meridian DSP5000 speakers using a Raspberry Pi, a USB to RS232 cable, a bit of coding magic and HomeKit. Hopefully, it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-click music!
+I'll walk you through my set-up which automates activating my Meridian DSP5000 speakers using a Raspberry Pi, a USB to RS232 cable, a bit of coding magic and HomeKit. Hopefully, it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-tap music.
 
 ## The Cast of Characters: The Kit
 
@@ -27,7 +27,9 @@ I'll walk you through my set-up which automates activating my Meridian DSP5000 s
 5. USB Plug Adaptor (for powering the Raspberry Pi):
 
     ![61XKbOo1-6L _AC_SL1500_](https://github.com/henry-morris/meridian-maestro/assets/23333300/8e2a9b31-beb3-42f5-bde3-e5a4a6e206a5)
-   
+
+## The Cast of Characters: The Connections
+
 Here's how everything connects:
 
 ```mermaid
