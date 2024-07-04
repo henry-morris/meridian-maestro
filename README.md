@@ -8,14 +8,26 @@ I'll walk you through my set-up which automates activating my Meridian DSP5000 s
 
 ## The Cast of Characters: The Kit
 
-Here's what I used:
+1. Two Meridian DSP5000 speakers:
 
-1. Two Meridian DSP5000 speakers
-2. Two HomeKit compatible Meross WiFi Smart Plugs grouped together in HomeKit
-3. Raspberry Pi Zero W 2 with a fast MicroSD card
-4. USB to Serial RS232 Adapter with FTDI Chipset
-5. USB Plug Adaptor (for powering the Raspberry Pi)
+   ![Meridian DSP5000 speakers](https://github.com/henry-morris/meridian-maestro/assets/23333300/6b72d956-83bd-4fd6-b4c1-edcb700664f8)
 
+2. Two HomeKit compatible Meross WiFi Smart Plugs grouped together in HomeKit:
+
+   ![Meross WiFi Smart Plugs](https://github.com/henry-morris/meridian-maestro/assets/23333300/2264031d-7366-42a9-bb96-c8dcbf960138)
+
+3. Raspberry Pi Zero W 2 with a fast MicroSD card:
+
+    ![shopping](https://github.com/henry-morris/meridian-maestro/assets/23333300/0594247e-783f-40e5-80a9-58e0151b3e8f)
+
+4. USB to Serial RS232 Adapter with FTDI Chipset:
+
+   ![USB to Serial RS232 Adapter](https://github.com/henry-morris/meridian-maestro/assets/23333300/aed0f1ab-02e1-4197-90ec-97580fd44632)
+
+5. USB Plug Adaptor (for powering the Raspberry Pi):
+
+    ![61XKbOo1-6L _AC_SL1500_](https://github.com/henry-morris/meridian-maestro/assets/23333300/8e2a9b31-beb3-42f5-bde3-e5a4a6e206a5)
+   
 Here's how everything connects:
 
 ```mermaid
