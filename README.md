@@ -1,14 +1,12 @@
 # Automating Meridian DSP5000 Speaker Activation for One-Click Audio Bliss
 
-I love my Meridian DSP5000 speakers, but turning them on was a hassle: activate plugs, find remote, power up, adjust volume. It felt outdated compared to my smart home. I envisioned a simpler solution - one tap on my phone to power up the speakers and set the perfect volume. That's exactly what I achieved:
+I love my Meridian DSP5000 speakers, but turning them on was a hassle: activate plugs, find remote, power up, adjust volume. It felt outdated compared to my smart home. I envisioned a simpler solution - one tap on my phone to power up the speakers and set the perfect volume. As the video below show, that's what I've managed to achieve:
 
 [![Demo Video](https://github.com/henry-morris/meridian-maestro/assets/23333300/23c97096-f46a-4fb2-b7d2-0b4ad9895a36)](https://github.com/henry-morris/meridian-maestro/assets/23333300/23c97096-f46a-4fb2-b7d2-0b4ad9895a36)
 
-## This Post, a Roadmap to Audio Nirvana
+I'll walk you through my set-up which automates activating my Meridian DSP5000 speakers using a Raspberry Pi, a USB to RS232 cable, a bit of coding magic and HomeKit. Hopefully, it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-click music!
 
-In this post, I'll walk you through my set-up which automates activating my Meridian DSP5000 speakers using a Raspberry Pi, a USB to RS232 cable, a bit of coding magic and HomeKit. Hopefully, it'll be helpful to fellow Meridian DSP5000 owners who want the simplicity of one-click music!
-
-## The Cast of Characters
+## The Cast of Characters: The Kit
 
 Here's what I used:
 
